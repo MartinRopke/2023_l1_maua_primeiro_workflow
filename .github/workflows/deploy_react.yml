@@ -12,8 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: deploy react
+    - uses: actions/checkout@v3
+      name: deploy react
       run: |
         ls
+        cd ./react-application
+        npm install
         npm run build
       
