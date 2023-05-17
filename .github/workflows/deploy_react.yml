@@ -14,11 +14,20 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v3
-      
-    - name: deploy react
+
+    - name: build react
       run: |
         ls
-        cd ./react-application
+        cd react-application
         npm install
         npm run build
+      
+    - name: create artifact
+      uses:  actions/upload-pages-artifact@v1
+      with:
+        name: my-artifact
+        path: react-application/build/
+
+    - name: deploy
+      uses: actions/deploy-pages@v2
       
