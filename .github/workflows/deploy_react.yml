@@ -13,5 +13,7 @@ jobs:
 
     steps:
     - name: deploy react
-    - run: npx create-react-app react-application
+      run: |
+        npm run build
+        ls
       
