@@ -30,4 +30,4 @@ jobs:
         
       #quarto step
       - name: Até mais!
-        run: "See you, Github Actions"
+        run: echo "See you, Github Actions"
